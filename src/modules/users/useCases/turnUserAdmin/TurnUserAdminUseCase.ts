@@ -12,7 +12,7 @@ class TurnUserAdminUseCase {
     const isUser = this.usersRepository.findById(user_id);
 
     if (!isUser) {
-      throw new Error("user doesn't exists");
+      throw new Error("user not found.");
     }
 
     isUser.updated_at = new Date();
